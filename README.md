@@ -69,11 +69,15 @@ The backend must be deployed and configured separately for production contact su
 
 ## GitHub Pages
 
-The website is deployed automatically from the `main` branch with GitHub Actions:
+To publish the website, first select **Settings → Pages → Build and deployment → Source → GitHub Actions** in the repository:
+
+https://github.com/ruppasyam91-maker/Sahavi-Software-Solutions/settings/pages
+
+After Pages is enabled, the website deploys automatically when frontend files are pushed to `main`:
 
 https://ruppasyam91-maker.github.io/Sahavi-Software-Solutions/
 
-The public website is static. The contact form requires the backend to be deployed separately and configured for production.
+The public website is static. The contact form requires the backend to be deployed separately and configured for production. After enabling Pages, rerun the latest failed workflow from the repository's Actions tab if it does not start automatically.
 
 ## Repository
 
