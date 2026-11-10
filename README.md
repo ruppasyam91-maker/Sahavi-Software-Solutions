@@ -36,7 +36,7 @@ Open the local URL printed by Vite, usually http://localhost:5173. Keep both ter
 - Technologies: `/technologies.html`
 - Contact Us: `/contact.html`
 
-The shared navigation and Services dropdown link directly to the corresponding pages and service sections.
+The shared navigation links directly to each page.
 
 ## Contact API
 
@@ -66,6 +66,14 @@ npm run preview
 ```
 
 The backend must be deployed and configured separately for production contact submissions.
+
+## GitHub Pages
+
+The website is deployed automatically from the `main` branch with GitHub Actions:
+
+https://ruppasyam91-maker.github.io/Sahavi-Software-Solutions/
+
+The public website is static. The contact form requires the backend to be deployed separately and configured for production.
 
 ## Repository
 
