@@ -3,19 +3,13 @@ export const services = [
     id: 'implementation',
     title: 'Oracle EPM Implementation',
     description: 'Plan and deliver an Oracle EPM foundation aligned to finance processes, reporting needs, and business goals.',
-    items: ['EPBCS and PBCS implementation', 'Planning model and application setup', 'Business rules, forms, and workflows', 'Testing, launch, and enablement'],
+    items: ['EPBCS and PBCS implementation', 'Planning model and application setup', 'Groovy and Calculation Manager rules, Essbase scripts', 'Forms, workflows, testing, launch, and enablement'],
   },
   {
     id: 'support',
     title: 'EPM Support & Maintenance',
     description: 'Keep critical planning applications stable, current, and ready for each planning cycle.',
     items: ['Production support and troubleshooting', 'Application and metadata maintenance', 'Performance reviews and optimization', 'Enhancements and release readiness'],
-  },
-  {
-    id: 'development',
-    title: 'EPM Application Development',
-    description: 'Extend Oracle EPM with maintainable calculations, automation, and finance-focused application experiences.',
-    items: ['Groovy and Calculation Manager rules', 'Essbase calculation scripts', 'Forms, dashboards, and runtime prompts'],
   },
   {
     id: 'migration',

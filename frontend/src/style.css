@@ -119,6 +119,10 @@ h1 em, h2 em { color: var(--blue); font-family: Georgia, 'Times New Roman', seri
 .section-heading > p { max-width: 410px; margin: 0 3px 4px 0; color: #68798d; font-size: 14px; line-height: 1.8; }
 .service-grid { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .service-grid-full { max-width: 1140px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 761px) {
+  .service-grid-full > .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
+  .service-grid:not(.service-grid-full) > .service-card:last-child:nth-child(3n + 1) { grid-column: 2; }
+}
 .service-card { min-height: 335px; padding: 27px 27px 25px; position: relative; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; transition: background .25s ease, box-shadow .25s ease, transform .25s ease; }
 .service-card:hover { z-index: 1; background: #f7fbfa; }
 .card-top { margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
