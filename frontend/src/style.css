@@ -449,6 +449,7 @@ h1 em, h2 em { color: var(--blue); font-family: Georgia, 'Times New Roman', seri
 .page-hero h1 {
   color: #fff;
 }
+.contact-page-hero h1 em { color: #fff; }
 .page-hero h1 em { color: #55d0aa; }
 .page-hero > p { color: #ccdcda; }
 h1, h2 { letter-spacing: -.025em; }
