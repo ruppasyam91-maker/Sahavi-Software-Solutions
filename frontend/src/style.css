@@ -655,6 +655,40 @@ main { scroll-margin-top: 96px; }
   .footer-policy { padding: 8px 0; }
 }
 
+.skip-link {
+  padding: 11px 16px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 30;
+  transform: translateY(-160%);
+  transition: transform .18s ease;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--navy-deep);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(16, 55, 60, .18);
+}
+.skip-link:focus { transform: translateY(0); }
+
+h1, h2 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.main-nav { gap: clamp(18px, 2.4vw, 36px); }
+.main-nav > a:not(.nav-cta) { min-height: 44px; display: inline-flex; align-items: center; }
+.service-card,
+.technology-card,
+.highlight-grid article { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.contact-form:focus-within { border-color: #b7ddd0; }
+.form-field textarea { line-height: 1.55; }
+.form-submit .button:disabled { opacity: .7; cursor: wait; }
+.form-submit .button[aria-busy="true"] { pointer-events: none; }
+
+@media (max-width: 760px) {
+  .main-nav > a:not(.nav-cta) { display: flex; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; }
+  .skip-link { transition: none; }
 }
