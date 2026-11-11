@@ -14,7 +14,7 @@ export const content = `
         <div class="hero-actions"><a class="button button-primary" href="${siteUrl('/contact.html')}">Discuss your EPM goals ${arrowIcon}</a><a class="text-link" href="${siteUrl('/services.html')}">Explore services ${arrowIcon}</a></div>
         <div class="hero-proof"><span class="proof-rule"></span><p>Specialists in Oracle Enterprise Performance Management</p></div>
       </div>
-      <div class="planning-visual reveal" aria-label="Connected financial plans for workforce, revenue, and expenses">
+      <div class="planning-visual reveal" role="img" aria-label="Illustration of connected workforce, revenue, and expense plans in Oracle EPM">
         <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
         <div class="visual-label"><span class="pulse-dot"></span> CONNECTED PLANNING</div>
         <div class="visual-center"><span class="center-kicker">ORACLE</span><strong>EPM</strong><span class="center-caption">FINANCE CLOUD</span></div>

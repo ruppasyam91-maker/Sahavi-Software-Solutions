@@ -17,20 +17,44 @@ export function initializePageBehavior() {
     })
   })
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+      menuToggle.setAttribute('aria-expanded', 'false')
+      menuToggle.setAttribute('aria-label', 'Open navigation')
+      mainNav?.classList.remove('is-open')
+      menuToggle.focus()
+    }
+  })
+
   const contactForm = document.querySelector<HTMLFormElement>('#contact-form')
   const formStatus = document.querySelector<HTMLParagraphElement>('.form-status')
+  const configuredContactApiUrl = import.meta.env.VITE_CONTACT_API_URL?.replace(/\/+$/, '')
+  const contactApiUrl = configuredContactApiUrl
+    ? `${configuredContactApiUrl}/api/contact`
+    : import.meta.env.DEV
+      ? '/api/contact'
+      : ''
+
+  if (contactForm && formStatus && !contactApiUrl) {
+    const submitButton = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]')
+    if (submitButton) submitButton.disabled = true
+    formStatus.dataset.state = 'error'
+    formStatus.textContent = 'Online inquiries are not configured yet. Please contact us through LinkedIn.'
+  }
 
   contactForm?.addEventListener('submit', async (event) => {
     event.preventDefault()
     const submitButton = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]')
     if (!submitButton || !formStatus) return
 
+    if (!contactApiUrl) return
+
     submitButton.disabled = true
     formStatus.dataset.state = 'pending'
     formStatus.textContent = 'Sending your inquiry...'
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(contactApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries())),
@@ -49,14 +73,19 @@ export function initializePageBehavior() {
     }
   })
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible')
-        observer.unobserve(entry.target)
-      }
-    })
-  }, { threshold: 0.12 })
+  const revealElements = document.querySelectorAll('.reveal')
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.12 })
 
-  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element))
+    revealElements.forEach((element) => revealObserver.observe(element))
+  } else {
+    revealElements.forEach((element) => element.classList.add('is-visible'))
+  }
 }

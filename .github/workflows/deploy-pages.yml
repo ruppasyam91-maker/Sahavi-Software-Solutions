@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'frontend/**'
+      - 'backend/**'
+      - 'render.yaml'
+      - 'README.md'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
@@ -35,9 +38,17 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Test contact API
+        working-directory: backend
+        run: npm test
+
       - name: Build website
         working-directory: frontend
         run: npm run build -- --base=/Sahavi-Software-Solutions/
+        env:
+          VITE_CONTACT_API_URL: ${{ vars.VITE_CONTACT_API_URL }}
+          VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
+          VITE_GOOGLE_SITE_VERIFICATION: ${{ vars.VITE_GOOGLE_SITE_VERIFICATION }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
