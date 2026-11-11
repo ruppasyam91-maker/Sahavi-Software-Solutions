@@ -26,8 +26,7 @@ export function renderFooter() {
     <footer class="site-footer">
       <a class="brand footer-brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home"><img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together"></a>
       <p><a href="${siteUrl('/index.html')}">Oracle EPM Expertise Across Planning | Performance Management.</a></p>
-      <a class="footer-policy" href="${siteUrl('/privacy.html')}">Privacy</a>
-      <span class="footer-focus">ORACLE EPM CONSULTING</span>
+      <a class="footer-focus" href="${siteUrl('/privacy.html')}">Privacy Notice</a>
     </footer>
   `
 }
