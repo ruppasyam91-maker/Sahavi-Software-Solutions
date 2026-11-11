@@ -19,7 +19,6 @@ export default defineConfig({
         home: page('./index.html'),
         about: page('./about.html'),
         services: page('./services.html'),
-        technologies: page('./technologies.html'),
         contact: page('./contact.html'),
       },
     },

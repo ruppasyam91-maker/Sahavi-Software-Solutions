@@ -1,7 +1,10 @@
 export const technologies = [
-  { name: 'Oracle EPBCS', category: 'Planning', description: 'Enterprise Planning and Budgeting Cloud for connected financial and operational plans.' },
-  { name: 'Oracle PBCS', category: 'Planning', description: 'Planning and Budgeting Cloud Service for structured budgeting and forecasting.' },
-  { name: 'Oracle FCCS', category: 'Consolidation', description: 'Financial Consolidation and Close Cloud for close and consolidation processes.' },
-  { name: 'Oracle ARCS', category: 'Reconciliation', description: 'Account Reconciliation Cloud for governed, trackable reconciliation work.' },
-  { name: 'Oracle EDMCS', category: 'Data management', description: 'Enterprise Data Management Cloud for controlled enterprise data changes.' },
+  { name: 'EPM Planning (EPBCS / PBCS)', category: 'Planning', description: 'Connected financial and operational planning, budgeting, and forecasting.' },
+  { name: 'Financial Consolidation and Close (FCCS)', category: 'Consolidation', description: 'Financial consolidation, close processes, and reporting.' },
+  { name: 'Account Reconciliation (ARCS)', category: 'Reconciliation', description: 'Governed account reconciliations with review and compliance workflows.' },
+  { name: 'Enterprise Data Management (EDMCS)', category: 'Data management', description: 'Controlled management of enterprise application and business data changes.' },
+  { name: 'Profitability and Cost Management (PCMCS)', category: 'Profitability', description: 'Analyze costs and profitability with allocations and calculations.' },
+  { name: 'Tax Reporting (TRCS)', category: 'Tax', description: 'Manage tax provision, country-by-country reporting, and tax workflows.' },
+  { name: 'Narrative Reporting (EPRCS)', category: 'Reporting', description: 'Create and collaborate on financial and management reporting packages.' },
+  { name: 'FreeForm', category: 'Planning', description: 'Build flexible planning applications with custom dimensions and models.' },
 ]

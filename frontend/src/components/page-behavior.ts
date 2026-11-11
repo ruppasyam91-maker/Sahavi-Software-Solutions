@@ -77,6 +77,12 @@ export function initializePageBehavior() {
     }
   })
 
+  const revealElements = document.querySelectorAll('.reveal')
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealElements.forEach((element) => element.classList.add('is-visible'))
+    return
+  }
+
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -86,5 +92,5 @@ export function initializePageBehavior() {
     })
   }, { threshold: 0.12 })
 
-  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element))
+  revealElements.forEach((element) => revealObserver.observe(element))
 }

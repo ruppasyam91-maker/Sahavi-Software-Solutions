@@ -5,13 +5,11 @@ import * as aboutPage from './pages/about'
 import * as contactPage from './pages/contact'
 import * as homePage from './pages/home'
 import * as servicesPage from './pages/services'
-import * as technologiesPage from './pages/technologies'
 
 const pages: Record<PageName, { title: string; content: string }> = {
   index: homePage,
   about: aboutPage,
   services: servicesPage,
-  technologies: technologiesPage,
   contact: contactPage,
 }
 

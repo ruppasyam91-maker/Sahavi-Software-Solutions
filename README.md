@@ -33,7 +33,6 @@ Open the local URL printed by Vite, usually http://localhost:5173. Keep both ter
 - Home: `/index.html`
 - About Us: `/about.html`
 - Services: `/services.html`
-- Technologies: `/technologies.html`
 - Contact Us: `/contact.html`
 
 The shared navigation links directly to each page.
