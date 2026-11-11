@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ruppasyam91-maker.github.io/Sahavi-Software-Solutions/sitemap.xml

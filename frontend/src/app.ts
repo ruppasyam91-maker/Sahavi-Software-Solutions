@@ -4,6 +4,7 @@ import { renderFooter, renderHeader, type PageName } from './components/site-she
 import * as aboutPage from './pages/about'
 import * as contactPage from './pages/contact'
 import * as homePage from './pages/home'
+import * as privacyPage from './pages/privacy'
 import * as servicesPage from './pages/services'
 
 const pages: Record<PageName, { title: string; content: string }> = {
@@ -11,6 +12,7 @@ const pages: Record<PageName, { title: string; content: string }> = {
   about: aboutPage,
   services: servicesPage,
   contact: contactPage,
+  privacy: privacyPage,
 }
 
 const pageName = window.location.pathname.split('/').pop()?.replace(/\.html$/, '') || 'index'
@@ -18,5 +20,5 @@ const currentPage: PageName = pageName in pages ? pageName as PageName : 'index'
 const page = pages[currentPage]
 
 document.title = page.title
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<a class="skip-link" href="#main-content">Skip to content</a>${renderHeader(currentPage)}<main id="main-content">${page.content}</main>${renderFooter()}`
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `${renderHeader(currentPage)}<main id="main-content" tabindex="-1">${page.content}</main>${renderFooter()}`
 initializePageBehavior()
