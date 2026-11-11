@@ -9,8 +9,8 @@ export function renderHeader(currentPage: PageName) {
       <a class="brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home">
         <img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together">
       </a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" type="button"><span></span><span></span></button>
-      <nav class="main-nav" aria-label="Main navigation">
+      <button class="menu-toggle" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false" type="button"><span></span><span></span></button>
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
         <a href="${siteUrl('/index.html')}"${currentPage === 'index' ? ' aria-current="page"' : ''}>Home</a>
         <a href="${siteUrl('/about.html')}"${currentPage === 'about' ? ' aria-current="page"' : ''}>About Us</a>
         <a href="${siteUrl('/services.html')}"${currentPage === 'services' ? ' aria-current="page"' : ''}>Services</a>

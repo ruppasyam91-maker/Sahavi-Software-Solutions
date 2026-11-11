@@ -20,5 +20,5 @@ const currentPage: PageName = pageName in pages ? pageName as PageName : 'index'
 const page = pages[currentPage]
 
 document.title = page.title
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `${renderHeader(currentPage)}<main>${page.content}</main>${renderFooter()}`
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `<a class="skip-link" href="#main-content">Skip to content</a>${renderHeader(currentPage)}<main id="main-content">${page.content}</main>${renderFooter()}`
 initializePageBehavior()
