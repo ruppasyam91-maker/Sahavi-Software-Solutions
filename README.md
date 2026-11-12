@@ -85,7 +85,7 @@ GitHub Pages only hosts the static frontend. The backend must be deployed separa
    - `VITE_CONTACT_API_URL`: the Render service origin, with no trailing slash (for example, `https://sahavi-contact-api.onrender.com`).
 5. Rerun the Pages workflow, then submit a test inquiry and confirm it arrives in the configured mailbox.
 
-The Contact page displays `mabala@sahavi.in`, and the Render blueprint directs inquiries to that address. Do not put the Resend API key in GitHub frontend variables or source files. Render's free web-service plan may sleep while idle, so the first request after inactivity can be delayed. Until `VITE_CONTACT_API_URL` is set, the contact form opens a prefilled email draft in the visitor's email app; the visitor must send it manually.
+The Contact page displays `mabala@sahavi.in`, and the Render blueprint directs inquiries to that address. The email link opens the visitor's default email app. The contact form sends directly from the website only after the backend and `VITE_CONTACT_API_URL` are configured; until then, it reports that online delivery is unavailable instead of opening an email app. Do not put the Resend API key in GitHub frontend variables or source files. Render's free web-service plan may sleep while idle, so the first request after inactivity can be delayed.
 
 ## Search and Privacy
 

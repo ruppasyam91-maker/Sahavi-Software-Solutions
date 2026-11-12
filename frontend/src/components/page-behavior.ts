@@ -62,27 +62,8 @@ export function initializePageBehavior() {
     if (!submitButton || !formStatus) return
 
     if (!contactApiUrl) {
-      const emailLink = document.querySelector<HTMLAnchorElement>('.contact-details a[href^="mailto:"]')
-      const recipient = emailLink?.getAttribute('href')?.slice('mailto:'.length)
-      if (!recipient) {
-        formStatus.dataset.state = 'error'
-        formStatus.textContent = 'Online inquiries are not configured. Please contact us through LinkedIn.'
-        return
-      }
-
-      const fields = Object.fromEntries(new FormData(contactForm).entries())
-      const subject = `Website inquiry from ${String(fields.name || 'your website')}`
-      const body = [
-        `Name: ${String(fields.name || '')}`,
-        `Email: ${String(fields.email || '')}`,
-        `Company: ${String(fields.company || '')}`,
-        '',
-        'Message:',
-        String(fields.message || ''),
-      ].join('\n')
-      formStatus.dataset.state = 'pending'
-      formStatus.textContent = 'Your email app will open with a draft. Send it to complete your inquiry.'
-      window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      formStatus.dataset.state = 'error'
+      formStatus.textContent = 'Online inquiry delivery is not configured yet. Please use the email or LinkedIn contact link.'
       return
     }
 
