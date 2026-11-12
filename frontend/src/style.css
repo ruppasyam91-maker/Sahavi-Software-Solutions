@@ -229,13 +229,16 @@ h1 em, h2 em { color: var(--blue); font-family: Georgia, 'Times New Roman', seri
 .form-status[data-state="success"] { color: #147d69; }
 .form-status[data-state="error"] { color: #b44040; }
 .privacy-note { margin: 13px 0 0; color: #758691; font-size: 10px; }
-.site-footer { min-height: 96px; padding: 22px max(6.7vw, calc((100vw - 1320px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #fff; }
-.footer-brand .brand-logo { width: 176px; }
-.site-footer > p { margin: 0; color: #77879a; font-size: 11px; line-height: 1.6; }
-.site-footer > p a { color: inherit; text-decoration: none; }
-.site-footer > p a:hover { text-decoration: underline; }
+.site-footer { padding: 12px max(6.7vw, calc((100vw - 1320px) / 2)) 8px; display: flex; flex-direction: column; gap: 5px; background: #fff; }
+.footer-main { min-height: 30px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.footer-brand .brand-logo { width: 130px; }
+.footer-main > p { flex: 1; margin: 0; color: #77879a; font-size: 11px; line-height: 1.6; text-align: center; }
+.footer-main > p a { color: inherit; text-decoration: none; }
+.footer-main > p a:hover { text-decoration: underline; }
 .footer-focus { color: #73869b; font-size: 12px; font-weight: 600; letter-spacing: .2px; text-decoration: none; }
 .footer-focus:hover { text-decoration: underline; }
+.footer-policy { align-self: flex-end; color: #075f4d; font-size: 12px; line-height: 1; text-decoration: underline; text-underline-offset: 3px; }
+.footer-policy:focus-visible { outline: 3px solid #087861; outline-offset: 3px; }
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -329,10 +332,10 @@ h1 em, h2 em { color: var(--blue); font-family: Georgia, 'Times New Roman', seri
   .contact-inner { grid-template-columns: 1fr; gap: 24px; }
   .contact-inner h2 { font-size: 38px; }
   .contact-form { padding: 19px; }
-  .site-footer { padding: 22px 23px; align-items: flex-start; flex-wrap: wrap; gap: 15px 20px; }
-  .site-footer > p { flex-basis: 100%; order: 2; }
-  .footer-brand .brand-logo { width: 150px; }
-  .footer-focus { margin-left: auto; padding-top: 9px; }
+  .site-footer { padding: 12px 23px 8px; gap: 4px; }
+  .footer-main { flex-wrap: wrap; gap: 4px 12px; }
+  .footer-main > p { flex-basis: 100%; order: 2; text-align: left; }
+  .footer-brand .brand-logo { width: 120px; }
 }
 
 @media (max-width: 480px) {
@@ -614,8 +617,9 @@ html { scroll-padding-top: 96px; }
 .privacy-note { color: #52666a; font-size: 12px; line-height: 1.6; }
 .privacy-note a,
 .privacy-page a:not(.button) { color: #075f4d; text-decoration: underline; text-underline-offset: 3px; }
-.site-footer > p,
+.footer-main > p,
 .footer-focus { color: #52666a; }
+.footer-policy { color: #075f4d; }
 .node small { color: #52666a; }
 .tech-panel-foot { color: #52666a; font-size: 9px; }
 .contact-form button:focus-visible,
@@ -885,7 +889,7 @@ form,
   .contact-inner { grid-template-columns: 1fr; gap: 26px; padding-top: 60px; padding-bottom: 64px; }
   .contact-form { width: 100%; }
   .home-contact { align-items: flex-start; flex-direction: column; }
-  .site-footer { align-items: flex-start; }
+  .site-footer { align-items: stretch; }
 }
 
 @media (max-width: 520px) {
@@ -943,7 +947,7 @@ form,
   .tech-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .form-submit { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .footer-brand .brand-logo { width: 132px; }
+  .footer-brand .brand-logo { width: 120px; }
   .footer-focus { max-width: 130px; text-align: right; line-height: 1.5; }
 }
 
@@ -959,7 +963,7 @@ body { color: var(--text-primary); }
 main p:not(.hero-intro):not(.hero-proof p):not(.page-hero > p):not(.expertise-copy > p):not(.form-status) { color: var(--text-body); }
 .main-nav,
 .text-link,
-.site-footer > p { color: var(--text-body); }
+.footer-main > p { color: var(--text-body); }
 .service-card li,
 .form-field { color: var(--text-body); }
 .home-service-grid { max-width: 1080px; }

@@ -24,9 +24,11 @@ export function renderHeader(currentPage: PageName) {
 export function renderFooter() {
   return `
     <footer class="site-footer">
-      <a class="brand footer-brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home"><img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together"></a>
-      <p><a href="${siteUrl('/index.html')}">Oracle EPM Expertise Across Planning | Performance Management.</a></p>
-      <a class="footer-focus" href="${siteUrl('/privacy.html')}">Privacy Notice</a>
+      <div class="footer-main">
+        <a class="brand footer-brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home"><img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together"></a>
+        <p><a href="${siteUrl('/index.html')}">Oracle EPM Expertise Across Planning | Performance Management.</a></p>
+      </div>
+      <a class="footer-policy footer-focus" href="${siteUrl('/privacy.html')}">Privacy Notice</a>
     </footer>
   `
 }
