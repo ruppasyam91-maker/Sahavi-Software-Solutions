@@ -16,15 +16,15 @@ export const content = `
         <div class="hero-proof"><span class="proof-rule"></span><p>Specialists in Oracle Enterprise Performance Management</p></div>
       </div>
       <div class="planning-visual reveal" aria-label="Oracle EPM capabilities for on-premises and cloud solutions, integrations, reporting, and training">
-        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
-        <div class="visual-label"><span class="pulse-dot"></span> CONNECTED PLANNING</div>
+        <div class="visual-orbit orbit-one" aria-hidden="true"><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span><span class="orbit-dot dot-four"></span><span class="orbit-dot dot-five"></span></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
         <div class="visual-center"><span class="center-kicker">ORACLE</span><strong>EPM</strong><span class="center-caption">FINANCE CLOUD</span></div>
-        <div class="node node-on-premises"><span class="node-icon">01</span><strong>On-Premises</strong></div>
-        <div class="node node-cloud-solutions"><span class="node-icon">02</span><strong>Cloud Solutions</strong></div>
-        <div class="node node-integrations"><span class="node-icon">03</span><strong>Integrations</strong></div>
-        <div class="node node-reporting"><span class="node-icon">04</span><strong>Reporting</strong></div>
-        <div class="node node-training"><span class="node-icon">05</span><strong>Training</strong></div>
-        <div class="visual-foot"><span>ONE PLAN</span><b>↗</b><span>BETTER DECISIONS</span></div>
+        <div class="orbiting-nodes">
+          <div class="node node-on-premises"><strong>On-Premises</strong></div>
+          <div class="node node-cloud-solutions"><strong>Cloud Solutions</strong></div>
+          <div class="node node-integrations"><strong>Integrations</strong></div>
+          <div class="node node-reporting"><strong>Reporting</strong></div>
+          <div class="node node-training"><strong>Training</strong></div>
+        </div>
       </div>
     </div>
     <a class="scroll-cue" href="#overview" aria-label="Scroll to company overview"><span></span></a>
@@ -40,6 +40,6 @@ export const content = `
   <section class="expertise-section" id="expertise">
     <div class="expertise-inner section-pad"><div class="expertise-copy reveal"><div class="eyebrow"><span></span> TECHNOLOGY EXPERTISE</div><h2>Deep in the<br><em>Oracle EPM stack.</em></h2><p>Focused capability across Oracle planning, close, reconciliation, data management, automation, and calculation technologies.</p><a class="button button-light" href="${siteUrl('/contact.html')}">Talk to our EPM team ${arrowIcon}</a></div><div class="technology-panel reveal"><div class="tech-panel-heading"><span>CORE CAPABILITIES</span><span class="tech-live"><i></i> ORACLE EPM</span></div><div class="tech-grid">${technologies.map((technology, index) => `<div class="tech-item"><span class="tech-index">${String(index + 1).padStart(2, '0')}</span><span>${technology.name}</span></div>`).join('')}</div></div></div>
   </section>
-  <section class="staffing-section section-pad"><div class="staffing-layout"><div class="staffing-title reveal"><div class="eyebrow eyebrow-blue"><span></span> EPM STAFFING</div><h2>People who know<br><em>your platform.</em></h2></div><div class="staffing-content reveal"><p>Bring in Oracle EPM functional and technical specialists across planning, consolidation and close, reconciliation, integrations, and data management.</p><a class="text-link dark-link" href="${siteUrl('/contact.html')}">Find your EPM specialist ${arrowIcon}</a></div><div class="staffing-note reveal"><p>Contract and permanent placements aligned to your project and team.</p><span class="note-line"></span></div></div></section>
+  <section class="staffing-section section-pad"><div class="staffing-layout"><div class="staffing-title reveal"><div class="eyebrow eyebrow-blue"><span></span> EPM STAFFING</div><h2>People who know<br><em>your platform.</em></h2></div><div class="staffing-content reveal"><p>Engage Oracle EPM functional and technical specialists in Planning (EPBCS/PBCS), Financial Consolidation and Close (FCCS), Account Reconciliation (ARCS), Enterprise Data Management (EDMCS), and data integrations.</p><a class="text-link dark-link" href="${siteUrl('/contact.html')}">Find your EPM specialist ${arrowIcon}</a></div></div></section>
   <section class="home-contact section-pad"><div><div class="eyebrow eyebrow-blue"><span></span> READY TO GET STARTED?</div><h2>Let's talk about<br><em>your EPM goals.</em></h2></div><a class="button button-primary" href="${siteUrl('/contact.html')}">Contact Sahavi ${arrowIcon}</a></section>
 `

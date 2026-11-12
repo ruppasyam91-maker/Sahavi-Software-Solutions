@@ -15,6 +15,6 @@ services:
       - key: RESEND_API_KEY
         sync: false
       - key: CONTACT_EMAIL
-        sync: false
+        value: mabala@sahavi.in
       - key: RESEND_FROM_EMAIL
         sync: false

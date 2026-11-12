@@ -83,10 +83,9 @@ GitHub Pages only hosts the static frontend. The backend must be deployed separa
 3. After the Render service is deployed, copy its HTTPS service URL.
 4. In GitHub, open **Settings → Secrets and variables → Actions → Variables** and add:
    - `VITE_CONTACT_API_URL`: the Render service origin, with no trailing slash (for example, `https://sahavi-contact-api.onrender.com`).
-   - `VITE_CONTACT_EMAIL`: the confirmed public contact email address. Until set, the site does not display an unverified email address.
 5. Rerun the Pages workflow, then submit a test inquiry and confirm it arrives in the configured mailbox.
 
-Do not put the Resend API key in GitHub frontend variables or source files. Render's free web-service plan may sleep while idle, so the first request after inactivity can be delayed. Until `VITE_CONTACT_API_URL` is set, the contact form opens a prefilled email draft in the visitor's email app; the visitor must send it manually.
+The Contact page displays `mabala@sahavi.in`, and the Render blueprint directs inquiries to that address. Do not put the Resend API key in GitHub frontend variables or source files. Render's free web-service plan may sleep while idle, so the first request after inactivity can be delayed. Until `VITE_CONTACT_API_URL` is set, the contact form opens a prefilled email draft in the visitor's email app; the visitor must send it manually.
 
 ## Search and Privacy
 

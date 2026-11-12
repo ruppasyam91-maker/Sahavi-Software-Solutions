@@ -1,23 +1,10 @@
 import { siteUrl } from '../components/site-shell'
 
 export const title = 'Contact Us | Sahavi Software Solutions'
-const configuredEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim()
-const escapeAttribute = (value: string) => value.replace(/[&<>"']/g, (character) => {
-  switch (character) {
-    case '&': return '&amp;'
-    case '<': return '&lt;'
-    case '>': return '&gt;'
-    case '"': return '&quot;'
-    case "'": return '&#39;'
-    default: return character
-  }
-})
-const contactEmail = configuredEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(configuredEmail)
-  ? escapeAttribute(configuredEmail)
-  : 'info@sahavisoftware.com'
+const contactEmail = 'mabala@sahavi.in'
 
 export const content = `
-  <section class="page-hero section-pad contact-page-hero"><a class="eyebrow eyebrow-blue contact-hero-link" href="#contact-form"><span aria-hidden="true"></span> CONTACT SAHAVI</a><h1>Start a conversation<br><em>about Oracle EPM.</em></h1><p>Tell us what your team is working on. We’ll connect your inquiry with the right EPM expertise.</p></section>
+  <section class="page-hero section-pad contact-page-hero"><a class="eyebrow eyebrow-blue contact-hero-link" href="#contact-form"><span aria-hidden="true"></span> CONTACT SAHAVI</a><h1><em>Start a conversation</em></h1><p>Tell us what your team is working on. We’ll connect your inquiry with the EPM expertise.</p></section>
   <section class="contact-section contact-page-section"><div class="contact-inner section-pad"><div class="contact-copy"><div class="eyebrow"><span></span> HOW CAN WE HELP?</div><h2>Let's find your<br><em>next step.</em></h2><p>Share a few details about your project, application, or staffing needs.</p><div class="contact-details"><span class="contact-detail-label">EMAIL</span><a href="mailto:${contactEmail}">${contactEmail}</a><span class="contact-detail-label">LINKEDIN</span><a href="https://www.linkedin.com/in/sahavi-solutions-876ab8220/" target="_blank" rel="noopener noreferrer">Sahavi Software Solutions</a><span class="contact-detail-label">SPECIALTY</span><ul class="contact-specialty-list"><li>Oracle EPM consulting</li><li>Implementation</li><li>Integrations</li><li>Staffing</li></ul></div></div>
     <form class="contact-form" id="contact-form">
       <div class="form-row"><label class="form-field">Name<input name="name" type="text" autocomplete="name" maxlength="100" required></label><label class="form-field">Email<input name="email" type="email" autocomplete="email" maxlength="254" required></label></div>

@@ -47,7 +47,6 @@ jobs:
         run: npm run build -- --base=/Sahavi-Software-Solutions/
         env:
           VITE_CONTACT_API_URL: ${{ vars.VITE_CONTACT_API_URL }}
-          VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
           VITE_GOOGLE_SITE_VERIFICATION: ${{ vars.VITE_GOOGLE_SITE_VERIFICATION }}
 
       - name: Configure GitHub Pages
