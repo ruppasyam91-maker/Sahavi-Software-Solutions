@@ -11,7 +11,7 @@ export const content = `
       <div class="hero-copy reveal">
         <div class="eyebrow"><span></span> ORACLE EPM CONSULTING & STAFFING</div>
         <h1>Oracle EPM.<br><em>expertise for</em><br>finance teams.</h1>
-        <p class="hero-intro">Sahavi Software Solutions helps finance teams plan with confidence through focused Oracle EPM consulting, implementation,support and training.</p>
+        <p class="hero-intro">Sahavi Software Solutions helps finance teams plan with confidence through focused Oracle EPM consulting, implementation, support, and training.</p>
         <div class="hero-actions"><a class="button button-primary" href="${siteUrl('/contact.html')}">Discuss your EPM goals ${arrowIcon}</a><a class="text-link" href="${siteUrl('/services.html')}">Explore services ${arrowIcon}</a></div>
         <div class="hero-proof"><span class="proof-rule"></span><p>Specialists in Oracle Enterprise Performance Management</p></div>
       </div>
