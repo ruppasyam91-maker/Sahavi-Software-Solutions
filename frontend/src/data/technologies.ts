@@ -7,4 +7,5 @@ export const technologies = [
   { name: 'Tax Reporting (TRCS)', category: 'Tax', description: 'Manage tax provision, country-by-country reporting, and tax workflows.' },
   { name: 'Narrative Reporting (EPRCS)', category: 'Reporting', description: 'Create and collaborate on financial and management reporting packages.' },
   { name: 'FreeForm', category: 'Planning', description: 'Build flexible planning applications with custom dimensions and models.' },
-]
+  { name: 'On-Premises', category: 'On-Premises', description: 'Legacy on-premises enterprise performance management solutions.' }
+];
