@@ -15,7 +15,7 @@ export function renderHeader(currentPage: PageName) {
         <a href="${siteUrl('/index.html')}"${currentPage === 'index' ? ' aria-current="page"' : ''}>Home</a>
         <a href="${siteUrl('/about.html')}"${currentPage === 'about' ? ' aria-current="page"' : ''}>About Us</a>
         <a href="${siteUrl('/services.html')}"${currentPage === 'services' ? ' aria-current="page"' : ''}>Services</a>
-        <a href="${siteUrl('/career.html')}"${currentPage === 'career' ? ' aria-current="page"' : ''}>Career</a>
+        <a href="${siteUrl('/career.html')}"${currentPage === 'career' ? ' aria-current="page"' : ''}>Careers</a>
         <a class="nav-cta" href="${siteUrl('/contact.html')}"${currentPage === 'contact' ? ' aria-current="page"' : ''}>Contact Us ${arrowIcon}</a>
       </nav>
     </header>

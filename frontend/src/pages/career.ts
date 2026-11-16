@@ -7,7 +7,7 @@ export const content = `
     <div class="eyebrow eyebrow-blue"><span></span> CAREERS AT SAHAVI</div>
     <h1>Grow your career<br><em>with Oracle EPM.</em></h1>
     <p>Work with a focused team helping finance organizations plan, close, and report with confidence. Bring your functional, technical, or finance expertise to meaningful client projects.</p>
-    <div class="hero-actions"><a class="button button-primary" href="#career-paths">Explore career paths ${arrowIcon}</a><a class="text-link" href="${siteUrl('/contact.html')}">Contact us ${arrowIcon}</a></div>
+    <div class="hero-actions"><a class="button button-primary" href="#career-paths">Explore Career Paths ${arrowIcon}</a><a class="text-link" href="${siteUrl('/contact.html')}">Contact Us ${arrowIcon}</a></div>
   </section>
 
   <section class="about-intro section-pad">
@@ -40,7 +40,7 @@ export const content = `
         <div class="eyebrow"><span></span> CAREER PATHS</div>
         <h2>Find where your skills<br><em>make an impact.</em></h2>
         <p>Interested in opportunities with Sahavi? Tell us about your experience and the kind of work you want to do. We’ll be in touch if there’s a suitable opportunity.</p>
-        <a class="button button-light" href="${siteUrl('/contact.html')}">Contact us about a career ${arrowIcon}</a>
+        <a class="button button-light" href="${siteUrl('/contact.html')}">Contact Us about a Career ${arrowIcon}</a>
       </div>
     </div>
   </section>
