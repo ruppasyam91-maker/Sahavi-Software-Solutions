@@ -12,25 +12,25 @@ export const content = `
         <div class="eyebrow"><span></span> ORACLE EPM CONSULTING & STAFFING</div>
         <h1>Oracle EPM.<br><em>expertise for</em><br>finance teams.</h1>
         <p class="hero-intro">Sahavi Software Solutions helps finance teams plan with confidence through focused Oracle EPM consulting, implementation, support, and training.</p>
-        <div class="hero-actions"><a class="button button-primary" href="${siteUrl('/contact.html')}">Discuss your EPM goals ${arrowIcon}</a><a class="text-link" href="${siteUrl('/services.html')}">Explore services ${arrowIcon}</a></div>
+        <div class="hero-actions"><a class="button button-primary" href="${siteUrl('/contact.html')}">Discuss Your EPM Goals ${arrowIcon}</a><a class="text-link" href="${siteUrl('/services.html')}">Explore Services ${arrowIcon}</a></div>
         <div class="hero-proof"><span class="proof-rule"></span><p>Specialists in Oracle Enterprise Performance Management</p></div>
       </div>
       <div class="planning-visual reveal" aria-label="Oracle EPM capabilities for on-premises and cloud solutions, integrations, reporting, and training">
         <div class="visual-orbit orbit-one" aria-hidden="true"><span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span><span class="orbit-dot dot-four"></span><span class="orbit-dot dot-five"></span></div><div class="visual-orbit orbit-two" aria-hidden="true"></div>
         <div class="visual-center"><span class="center-kicker">ORACLE</span><strong>EPM</strong><span class="center-caption">FINANCE CLOUD</span></div>
         <div class="orbiting-nodes">
-          <div class="node node-on-premises"><strong>On-Premises</strong></div>
-          <div class="node node-cloud-solutions"><strong>Cloud Solutions</strong></div>
-          <div class="node node-integrations"><strong>Integrations</strong></div>
-          <div class="node node-reporting"><strong>Reporting</strong></div>
-          <div class="node node-training"><strong>Training</strong></div>
+          <div class="node node-on-premises"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="5" rx="1"></rect><rect x="4" y="10" width="16" height="5" rx="1"></rect><rect x="4" y="17" width="16" height="4" rx="1"></rect><path d="M7 5.5h.01M7 12.5h.01M7 19h.01"></path></svg></span><strong>On-Premises</strong></div>
+          <div class="node node-cloud-solutions"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 18h12a4 4 0 0 0 .4-8A6.5 6.5 0 0 0 6 9a4.5 4.5 0 0 0 0 9Z"></path><path d="M12 16V9m-3 3 3-3 3 3"></path></svg></span><strong>Cloud Solutions</strong></div>
+          <div class="node node-integrations"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7H7a4 4 0 0 0 0 8h3m5-6h2a4 4 0 0 1 0 8h-3M8 12h8"></path></svg></span><strong>Integrations</strong></div>
+          <div class="node node-reporting"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V12h4v8M10 20V8h4v12M16 20V4h4v16M4 9l5-4 4 2 6-5m-4 0h4v4"></path></svg></span><strong>Reporting</strong></div>
+          <div class="node node-training"><span class="node-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M8 21h8m-4-5v5m-5-9 3-3 2 2 4-4m-2 0h2v2"></path></svg></span><strong>Training</strong></div>
         </div>
       </div>
     </div>
     <a class="scroll-cue" href="#overview" aria-label="Scroll to company overview"><span></span></a>
   </section>
   <section class="overview-section section-pad" id="overview">
-    <div class="section-heading reveal"><div><div class="eyebrow eyebrow-blue"><span></span> SAHAVI SOFTWARE SOLUTIONS</div><h2>Built around the work<br><em>finance teams do.</em></h2></div><p>We bring functional understanding and technical delivery together across Oracle EPM, helping organizations improve how they plan, close, and manage performance.</p></div>
+    <div class="section-heading reveal"><div><div class="eyebrow eyebrow-blue"><span></span> SAHAVI SOFTWARE SOLUTIONS</div><h2>Built around the work<br><em>finance teams do.</em></h2></div><p>We combine deep functional expertise with technical excellence across Oracle EPM, empowering organizations to streamline planning, accelerate financial close, and drive better business performance.</p></div>
     <div class="highlight-grid"><article><h3>Finance-Led Delivery</h3><p>EPM solutions shaped around planning, budgeting, consolidation, close, and reporting.</p></article><article><h3>Oracle EPM Focus</h3><p>Consulting, application development, integrations, and support across the EPM suite.</p></article><article><h3>Support Beyond Launch</h3><p>Practical expertise for implementation, enhancements, migration, and ongoing operations.</p></article></div>
   </section>
   <section class="service-section section-pad" id="services">
@@ -40,6 +40,6 @@ export const content = `
   <section class="expertise-section" id="expertise">
     <div class="expertise-inner section-pad"><div class="expertise-copy reveal"><div class="eyebrow"><span></span> TECHNOLOGY EXPERTISE</div><h2>Deep in the<br><em>Oracle EPM stack.</em></h2><p>Focused capability across Oracle planning, close, reconciliation, data management, automation, and calculation technologies.</p><a class="button button-light" href="${siteUrl('/contact.html')}">Talk to our EPM team ${arrowIcon}</a></div><div class="technology-panel reveal"><div class="tech-panel-heading"><span>CORE CAPABILITIES</span><span class="tech-live"><i></i> ORACLE EPM</span></div><div class="tech-grid">${technologies.map((technology) => `<div class="tech-item"><span>${technology.name}</span></div>`).join('')}</div></div></div>
   </section>
-  <section class="staffing-section section-pad"><div class="staffing-layout"><div class="staffing-title reveal"><div class="eyebrow eyebrow-blue"><span></span> EPM STAFFING</div><h2>People who know<br><em>your platform.</em></h2></div><div class="staffing-content reveal"><p>Engage Oracle EPM functional and technical specialists in Planning (EPBCS/PBCS), Financial Consolidation and Close (FCCS), Account Reconciliation (ARCS), Enterprise Data Management (EDMCS), and data integrations.</p><a class="text-link dark-link" href="${siteUrl('/contact.html')}">Find your EPM specialist ${arrowIcon}</a></div></div></section>
+  <section class="staffing-section section-pad"><div class="staffing-layout"><div class="staffing-title reveal"><div class="eyebrow eyebrow-blue"><span></span> EPM STAFFING</div><h2>People who know<br><em>your platform.</em></h2></div><div class="staffing-content reveal"><p>Partner with Oracle EPM functional and technical specialists delivering end-to-end excellence across Financial Consolidation, Account Reconciliation, Enterprise Data Management, Planning, and Data Integration.</p><a class="text-link dark-link" href="${siteUrl('/contact.html')}">Find your EPM specialist ${arrowIcon}</a></div></div></section>
   <section class="home-contact section-pad"><div><div class="eyebrow eyebrow-blue"><span></span> READY TO GET STARTED?</div><h2>Let's talk about<br><em>your EPM goals.</em></h2></div><a class="button button-primary" href="${siteUrl('/contact.html')}">Contact Sahavi ${arrowIcon}</a></section>
 `

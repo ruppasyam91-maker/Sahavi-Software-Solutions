@@ -2,6 +2,7 @@ import './style.css'
 import { initializePageBehavior } from './components/page-behavior'
 import { renderFooter, renderHeader, type PageName } from './components/site-shell'
 import * as aboutPage from './pages/about'
+import * as careerPage from './pages/career'
 import * as contactPage from './pages/contact'
 import * as homePage from './pages/home'
 import * as privacyPage from './pages/privacy'
@@ -11,6 +12,7 @@ const pages: Record<PageName, { title: string; content: string }> = {
   index: homePage,
   about: aboutPage,
   services: servicesPage,
+  career: careerPage,
   contact: contactPage,
   privacy: privacyPage,
 }

@@ -38,6 +38,7 @@ export default defineConfig(({ mode }) => {
           home: page('./index.html'),
           about: page('./about.html'),
           services: page('./services.html'),
+          career: page('./career.html'),
           contact: page('./contact.html'),
           privacy: page('./privacy.html'),
         },

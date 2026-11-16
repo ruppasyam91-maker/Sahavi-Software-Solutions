@@ -1,4 +1,4 @@
-export type PageName = 'index' | 'about' | 'services' | 'contact' | 'privacy'
+export type PageName = 'index' | 'about' | 'services' | 'contact' | 'privacy' | 'career'
 
 export const arrowIcon = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5" /></svg>'
 export const siteUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
@@ -15,6 +15,7 @@ export function renderHeader(currentPage: PageName) {
         <a href="${siteUrl('/index.html')}"${currentPage === 'index' ? ' aria-current="page"' : ''}>Home</a>
         <a href="${siteUrl('/about.html')}"${currentPage === 'about' ? ' aria-current="page"' : ''}>About Us</a>
         <a href="${siteUrl('/services.html')}"${currentPage === 'services' ? ' aria-current="page"' : ''}>Services</a>
+        <a href="${siteUrl('/career.html')}"${currentPage === 'career' ? ' aria-current="page"' : ''}>Career</a>
         <a class="nav-cta" href="${siteUrl('/contact.html')}"${currentPage === 'contact' ? ' aria-current="page"' : ''}>Contact Us ${arrowIcon}</a>
       </nav>
     </header>
@@ -24,11 +25,8 @@ export function renderHeader(currentPage: PageName) {
 export function renderFooter() {
   return `
     <footer class="site-footer">
-      <div class="footer-main">
-        <a class="brand footer-brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home"><img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together"></a>
-      </div>
       <div class="footer-bottom">
-        <p><a href="${siteUrl('/index.html')}">Oracle EPM Expertise Across Planning | Performance Management.</a></p>
+        <a class="brand footer-brand" href="${siteUrl('/index.html')}" aria-label="Sahavi Software Solutions home"><img class="brand-logo" src="${siteUrl('/sahavi-logo.svg')}" alt="Sahavi Software Solutions - We Grow Together"></a>
         <a class="footer-policy footer-focus" href="${siteUrl('/privacy.html')}">Privacy Notice</a>
       </div>
     </footer>
